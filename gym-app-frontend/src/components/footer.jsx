@@ -39,9 +39,9 @@ const Footer = () => {
       </Column>
       <Column>
         <h2>Opening Hours</h2>
-        <p>Weekdays: 09:00 - 21:00</p>
-        <p>Saturday: 10:00 - 18:00</p>
-        <p>Sunday: Closed</p>
+        <p>Sunday - Thursday: 09:00 - 21:00</p>
+        <p>Friday: 09:00 - 12:00</p>
+        <p>Saturday: Closed</p>
       </Column>
     </FooterContainer>
   );
