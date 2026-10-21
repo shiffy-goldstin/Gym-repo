@@ -1,0 +1,7 @@
+.env
+.env.*
+!.env.example
+**/Thumbs.db
+**/node_modules/
+**/dist/
+**/target/
