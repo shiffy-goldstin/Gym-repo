@@ -39,12 +39,12 @@ const Login = () => {
 
       navigate("/profil");
     } catch (error) {
-      console.error("Giriş işlemi sırasında hata oluştu:", error);
+      console.error("Login failed:", error);
       setErrorMessage(error.code === "ERR_NETWORK"
-        ? "לא ניתן להגיע לשרת. ודאי שה־backend פועל ונסי שוב."
+        ? "Unable to reach the server. Make sure the backend is running and try again."
         : error.response?.status === 401 || error.response?.status === 403
-          ? "האימייל או הסיסמה שגויים. אם אין לך חשבון, הירשמי קודם."
-          : "ההתחברות נכשלה. נסי שוב בעוד רגע.");
+          ? "The email or password is incorrect. If you don't have an account, register first."
+          : "Login failed. Please try again in a moment.");
     } finally {
       setIsSubmitting(false);
     }
@@ -58,27 +58,27 @@ const Login = () => {
         </ImageSection>
         <FormSection>
           <LoginForm onSubmit={handleLogin}>
-            <FormTitle>Üye Girişi</FormTitle>
+            <FormTitle>Member Log In</FormTitle>
             <FormInput
               type="email"
-              placeholder="E-posta Adresi"
+              placeholder="Email address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
             <FormInput
               type="password"
-              placeholder="Şifre"
+              placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
             {errorMessage && <LoginError role="alert">{errorMessage}</LoginError>}
             <LoginButton type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "מתחבר..." : "Giriş Yap"}
+              {isSubmitting ? "Logging in..." : "Log In"}
             </LoginButton>
             <RegisterPrompt>
-              Hesabınız yok mu? <RegisterLink to="/register">Kayıt olun</RegisterLink>
+              Don't have an account? <RegisterLink to="/register">Sign up</RegisterLink>
             </RegisterPrompt>
           </LoginForm>
         </FormSection>

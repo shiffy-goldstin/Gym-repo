@@ -26,22 +26,22 @@ const Footer = () => {
   return (
     <FooterContainer>
       <Column>
-        <h2>Bize Ulaşın</h2>
+        <h2>Contact Us</h2>
         <p>
-          <i className="fa fa-map-marker-alt"></i> Adres: Sivas
+          <i className="fa fa-map-marker-alt"></i> Address: Sivas
         </p>
         <p>
-          <i className="fa fa-phone-alt"></i> Telefon: 123-456-7890
+          <i className="fa fa-phone-alt"></i> Phone: 123-456-7890
         </p>
         <p>
           <i className="fa fa-envelope"></i> Email: gym.app36@gmail.com
         </p>
       </Column>
       <Column>
-        <h2>Çalışma Saatlerimiz</h2>
-        <p>Haftaiçi: 09:00 - 21:00</p>
-        <p>Cumartesi: 10:00 - 18:00</p>
-        <p>Pazar: Kapalı!</p>
+        <h2>Opening Hours</h2>
+        <p>Weekdays: 09:00 - 21:00</p>
+        <p>Saturday: 10:00 - 18:00</p>
+        <p>Sunday: Closed</p>
       </Column>
     </FooterContainer>
   );

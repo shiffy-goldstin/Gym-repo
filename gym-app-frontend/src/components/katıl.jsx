@@ -74,13 +74,13 @@ const Katıl = () => {
 
   return (
     <Container>
-      <Heading>Aramıza Hoşgeldin!</Heading>
-      <p>Hadi Tanışalım !  Aşağıdaki formu doldurarak başlayabiliriz</p>
+      <Heading>Welcome to the Gym!</Heading>
+      <p>Let's get to know you. Fill out the form below to get started.</p>
       <Form onSubmit={handleSubmit}>
         <Input
           type="text"
           name="name"
-          placeholder="Adınız"
+          placeholder="Name"
           value={formData.name}
           onChange={handleChange}
           required
@@ -88,7 +88,7 @@ const Katıl = () => {
         <Input
           type="email"
           name="email"
-          placeholder="E-posta Adresiniz"
+          placeholder="Email address"
           value={formData.email}
           onChange={handleChange}
           required
@@ -96,7 +96,7 @@ const Katıl = () => {
         <Input
           type="tel"
           name="phone"
-          placeholder="Telefon Numaranız"
+          placeholder="Phone number"
           value={formData.phone}
           onChange={handleChange}
           required
@@ -104,7 +104,7 @@ const Katıl = () => {
         <Input
           type="number"
           name="age"
-          placeholder="Yaşınız"
+          placeholder="Age"
           value={formData.age}
           onChange={handleChange}
           required
@@ -112,14 +112,14 @@ const Katıl = () => {
         <Input
           type="text"
           name="gender"
-          placeholder="Cinsiyetiniz (Erkek/Kadın/Diğer)"
+          placeholder="Gender (male/female/other)"
           value={formData.gender}
           onChange={handleChange}
         />
         <Input
           type="text"
           name="address"
-          placeholder="Adresiniz"
+          placeholder="Address"
           value={formData.address}
           onChange={handleChange}
           required
@@ -127,11 +127,11 @@ const Katıl = () => {
         <Input
           type="text"
           name="message"
-          placeholder="Mesajınız (isteğe bağlı)"
+          placeholder="Message (optional)"
           value={formData.message}
           onChange={handleChange}
         />
-        <Button type="submit">Hadi Başlayalım</Button>
+        <Button type="submit">Get Started</Button>
       </Form>
     
     </Container>

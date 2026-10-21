@@ -19,8 +19,8 @@ const Anasayfa = () => {
         <HeroSection>
           <HeroImage src={gymImageOne} alt="Motivational Background" />
           <MotivationalText>
-            <MainText>DAHA İYİ BİR SENSİN!</MainText>
-            <SubText>Hedeflerini gerçekleştir ve kendini keşfet!</SubText>
+            <MainText>BECOME A BETTER YOU!</MainText>
+            <SubText>Reach your goals and discover your potential.</SubText>
           </MotivationalText>
         </HeroSection>
       </div>
@@ -42,34 +42,34 @@ const AboutUs = () => {
     <>
     <AboutUsContainer>
   <AboutText>
-    <h3 style={{ color: "#00ff00", textAlign: "center" }}>Biz Kimiz?</h3>
-    <h2 style={{ textAlign: "center" }}>"Güçlü Bir Topluluğun Parçası Olun!"</h2>
+    <h3 style={{ color: "#00ff00", textAlign: "center" }}>Who We Are</h3>
+    <h2 style={{ textAlign: "center" }}>&quot;Be Part of a Strong Community!&quot;</h2>
     <p>
-      Biz, sağlıklı yaşamı ve kişisel gelişimi destekleyen bir spor topluluğuyuz. 
-      Amacımız, üyelerimize en iyi fitness deneyimini sunmak ve onları hedeflerine 
-      ulaşmaları için motive etmek. Her yaştan ve seviyeden bireye hitap eden 
-      programlarımızla, kendinizi güçlü, enerjik ve sağlıklı hissetmenizi sağlıyoruz. 
-      Birlikte başarıya ulaşacağımıza inanıyoruz!
+      We are a fitness community dedicated to healthy living and personal growth.
+      Our goal is to give every member an outstanding fitness experience and the
+      motivation to reach their goals. Our programs welcome people of all ages and
+      fitness levels, helping you feel stronger, more energetic, and healthier.
+      We believe we can achieve more together.
     </p>
   </AboutText>
   <AboutText>
-    <h3 style={{ color: "#00ff00", textAlign: "center" }}>Misyonumuz</h3>
-    <h2 style={{ textAlign: "center" }}>"Sağlıklı Yaşam, Hedefe Ulaş!"</h2>
+    <h3 style={{ color: "#00ff00", textAlign: "center" }}>Our Mission</h3>
+    <h2 style={{ textAlign: "center" }}>Live Well. Reach Your Goals.</h2>
     <p>
-      Misyonumuz, sağlıklı yaşamı teşvik etmek ve üyelerimizin kişisel gelişimlerini 
-      desteklemektir. Üyelerimize en iyi fitness deneyimini sunarak, onları hedeflerine 
-      ulaşmaları için motive ediyoruz. Her yaştan bireye hitap eden programlarımızla, 
-      sağlıklı bir yaşam sürmenizi sağlıyoruz. Hep birlikte daha güçlü bir geleceğe!
+      Our mission is to encourage healthy living and support our members' personal
+      growth. We create an exceptional fitness experience that motivates you to
+      reach your goals. Our programs are designed for people of all ages, helping
+      everyone build a healthier life and a stronger future together.
     </p>
   </AboutText>
   <AboutText>
-    <h3 style={{ color: "#00ff00", textAlign: "center" }}>Vizyonumuz</h3>
-    <h2 style={{ textAlign: "center" }}>"Sporla Sağlıklı Bir Gelecek!"</h2>
+    <h3 style={{ color: "#00ff00", textAlign: "center" }}>Our Vision</h3>
+    <h2 style={{ textAlign: "center" }}>A Healthier Future Through Fitness!</h2>
     <p>
-      Vizyonumuz, sağlıklı yaşamı ve kişisel gelişimi teşvik eden bir spor topluluğu 
-      oluşturmaktır. Amacımız, üyelerimizi en iyi şekilde desteklemek ve hedeflerine 
-      ulaşmalarını sağlamak. Enerjik ve sağlıklı bireyler yetiştirmek için buradayız. 
-      Hep birlikte daha sağlıklı bir gelecek inşa ediyoruz!
+      We envision a fitness community that inspires healthy living and personal
+      growth. We are here to support our members, help them reach their goals, and
+      build a community of energetic, healthy people. Together, we are creating a
+      healthier future.
     </p>
   </AboutText>
 </AboutUsContainer>
@@ -86,18 +86,24 @@ const CustomizedPrograms = () => {
   <ProgramSection>
     <ProgramImage src={gymImageOne} alt="First Program" />
     <ProgramText>
-      <h3>Hedeflerinize Ulaşmak İçin Özel Programlar</h3>
+      <h3>Personalized Programs to Help You Reach Your Goals</h3>
       <p>
-        Gym App'de, hayalinizdeki bedene ulaşmak artık çok kolay! Eğitmenlerimizle birlikte hazırlanan kişiye özel antrenman programları sayesinde, sadece spor yapmakla kalmayacak, aynı zamanda eğleneceksiniz. Sunduğumuz yenilikçi Türkçe sanal grup dersleri ile istediğiniz saatte ders alabilir, 100’den fazla seçenekle hedeflerinize uygun programları bulabilirsiniz.
+        At Gym App, getting closer to your fitness goals can be both effective and
+        enjoyable. Our trainers create personalized workout plans, and our virtual
+        group classes offer flexible scheduling and more than 100 options to match
+        your goals.
       </p>
     </ProgramText>
   </ProgramSection>
 
   <ProgramSection>
     <ProgramText>
-      <h3>GFX: 30 Dakikada Tam Vücut Antrenmanı</h3>
+      <h3>GFX: A Full-Body Workout in 30 Minutes</h3>
       <p>
-        Sadece 30 dakikada fit bir bedene sahip olmak istemez misiniz? Gym App'nin sunduğu GFX (Gym Floor Exercise) programı ile, tüm kas gruplarınızı çalıştırarak kalori yakarken eğlenin! Yüksek yoğunluklu HIIT temalarımızla, istediğiniz bölgeye odaklanabilir ve eğitmeninizin rehberliğinde en uygun hareketleri deneyebilirsiniz. Hedeflerinize ulaşmak için şimdi başlayın!
+        Make the most of a 30-minute session with Gym App's GFX (Gym Floor
+        Exercise) program. Work every major muscle group, burn calories, and enjoy
+        high-intensity HIIT sessions tailored to your goals, with guidance from
+        your trainer. Get started today!
       </p>
     </ProgramText>
     <ProgramImage src={gymImageTwo} alt="Second Program" />
@@ -106,9 +112,12 @@ const CustomizedPrograms = () => {
   <ProgramSection>
     <ProgramImage src={gymImageThree} alt="Third Program" />
     <ProgramText>
-      <h3>Fitness Yolculuğunuzda Yanınızdayız</h3>
+      <h3>Here for Every Step of Your Fitness Journey</h3>
       <p>
-        Gym App, fitness yolculuğunuzda her aşamada yanınızda! Deneyimli eğitmenlerimiz ve modern ekipmanlarımız ile sağlıklı yaşam alışkanlıkları kazanmanıza yardımcı oluyoruz. Hedeflerinize ulaşmak için en etkili yöntemlerle dolu, eğlenceli ve motive edici bir ortam sunuyoruz. Şimdi kayıt olun, güçlü ve sağlıklı bir geleceğe adım atın!
+        Gym App is with you at every stage of your fitness journey. Our experienced
+        trainers and modern equipment help you build healthy habits in an engaging,
+        motivating environment. Sign up today and take a step toward a stronger,
+        healthier future.
       </p>
     </ProgramText>
   </ProgramSection>
@@ -126,16 +135,19 @@ const CustomizedPrograms = () => {
 const OurTeam = () => {
     return (
       <>
-       <h1 style={{textAlign:'center'}}>ÇALIŞMA ALANLARIMIZ</h1>
+      <h1 style={{textAlign:'center'}}>OUR FITNESS PROGRAMS</h1>
    <OurTeamContainer>
    
   <TeamText>
     
-      <h2 style={{ textAlign: "center", color: 'white' }}>PİLATES</h2>
+      <h2 style={{ textAlign: "center", color: 'white' }}>PILATES</h2>
    
     <img src={gymImageOne} style={{ width: '100%', height: 'auto' }} />
     <p>
-      Pilates, bedeninizi güçlendirmek ve esnekliğinizi artırmak için mükemmel bir yöntemdir. Eğitmenlerimiz eşliğinde, nefes kontrolü ve duruşa odaklanarak, hem fiziksel hem de zihinsel dengeyi sağlarsınız. Bireysel hedeflerinize yönelik özel programlarla, sağlıklı ve dengeli bir yaşam sürmeye bir adım daha yaklaşın!
+      Pilates is a great way to build strength and improve flexibility. With our
+      instructors, you will focus on breath and posture while developing physical
+      and mental balance. Personalized programs help you move toward a healthier,
+      more balanced life.
     </p>
   </TeamText>
 
@@ -145,57 +157,61 @@ const OurTeam = () => {
   
     <img src={gymImageTwo} style={{ width: '100%', height: 'auto' }} />
     <p>
-      Yoga, bedeni ve zihni bir araya getirerek içsel huzuru bulmanıza yardımcı olur. Farklı seviyelerdeki derslerimizle, esneklik kazanacak, stresi azaltacak ve bedeninizi yeniden keşfedeceksiniz. Eğitmenlerimizin rehberliğinde, bedeninizi ve ruhunuzu uyum içinde bir araya getirin!
+      Yoga brings body and mind together to help you find inner balance. Our
+      classes for different experience levels can help you improve flexibility,
+      reduce stress, and reconnect with your body. Find your balance with guidance
+      from our instructors.
     </p>
   </TeamText>
 
   <TeamText>
   
-      <h2 style={{ textAlign: "center", color: 'white' }}>FİTNESS</h2>
+      <h2 style={{ textAlign: "center", color: 'white' }}>FITNESS</h2>
  
     <img src={gymImageThree} style={{ width: '100%', height: 'auto' }} />
     <p>
-      Fitness, genel sağlığınızı ve fiziksel gücünüzü artırmak için harika bir yoldur. Eğlenceli grup dersleri ve bireysel antrenman seçenekleri ile, tüm kas gruplarınızı çalıştırarak, güçlü ve fit bir beden elde edersiniz. Hedeflerinizi gerçekleştirmek için motivasyon dolu bir ortamda yer alın!
+      Fitness is an effective way to improve your overall health and strength. Our
+      group classes and personal training sessions work every major muscle group
+      and help you build a stronger, fitter body. Train in a motivating environment
+      and work toward your goals.
     </p>
   </TeamText>
 
   <TeamText>
    
-      <h2 style={{ textAlign: "center", color: 'white' }}>KİCK-BOKS</h2>
+      <h2 style={{ textAlign: "center", color: 'white' }}>KICKBOXING</h2>
     
     <img src={gymImageOne} style={{ width: '100%', height: 'auto' }} />
     <p>
-      Kick-boks, hem fiziksel dayanıklılığınızı artırır hem de stres atmanızı sağlar. Eğitmenlerimizle birlikte, tekniklerinizi geliştirecek ve kendinizi daha güvende hissetmenizi sağlayacak bir antrenman deneyimi yaşayacaksınız. Kendinizi güçlü ve dinamik hissederek, eğlenceli bir şekilde forma girin!
+      Kickboxing builds physical endurance and offers a great way to relieve
+      stress. Train with our instructors to develop your technique and confidence.
+      Get stronger, feel more dynamic, and have fun along the way.
     </p>
   </TeamText>
 </OurTeamContainer>
-
-
       </>
     );
   };
 
-
-
-  const Gallery = () => {
-    return (
-        <>
+const Gallery = () => {
+  return (
+    <>
       <GalleryContainer>
-        <h1 style={{ textAlign: "center"}}>GYM APP</h1>
-        <br/>
+        <h1 style={{ textAlign: "center" }}>GYM APP</h1>
+        <br />
         <ImagesGrid>
           {Array.from({ length: 12 }, (_, index) => [gymImageOne, gymImageTwo, gymImageThree][index % 3]).map((src, index) => (
             <ImageWrapper key={index}>
-              <StyledImage src={src} alt={`Gym Image ${index + 1}`} />
+              <StyledImage src={src} alt={`Gym image ${index + 1}`} />
             </ImageWrapper>
           ))}
         </ImagesGrid>
       </GalleryContainer>
-      <br/>
-      <br/>
-      </>
-    );
-  };
+      <br />
+      <br />
+    </>
+  );
+};
 
 
 // Styled Components

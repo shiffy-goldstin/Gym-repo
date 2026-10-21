@@ -135,7 +135,7 @@ function Iletisim() {
       setFormData({ fullName: "", email: "", message: "" }); // Formu sıfırla
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("Mesaj gönderiminde bir hata oluştu.");
+      alert("There was an error sending your message.");
       // Hata durumunda yapılacak işlemler
     }
   };
@@ -143,13 +143,13 @@ function Iletisim() {
   return (
     <Container>
       <TextContainer>
-        <h3>Bize Ulaşabilirsiniz</h3>
+        <h3>Get in Touch</h3>
         <FormContainer>
           <form onSubmit={handleSubmit}>
             <input
               type="text"
               name="fullName"
-              placeholder="Adınız ve Soyadınız"
+              placeholder="Full name"
               value={formData.fullName}
               onChange={handleChange}
               required
@@ -157,36 +157,36 @@ function Iletisim() {
             <input
               type="email"
               name="email"
-              placeholder="Email Adresiniz"
+              placeholder="Email address"
               value={formData.email}
               onChange={handleChange}
               required
             />
             <textarea
               name="message"
-              placeholder="Mesajınız"
+              placeholder="Your message"
               value={formData.message}
               onChange={handleChange}
               required
             />
             <br />
-            <button type="submit">Gönder</button>
+            <button type="submit">Send</button>
           </form>
         </FormContainer>
         <br />
       </TextContainer>
 
-      {/* İletişim Bilgileri */}
+      {/* Contact information */}
       <InfoContainer>
         <div className="info-box">
           <p>
-            <strong>Telefon:</strong>
+            <strong>Phone:</strong>
           </p>
           <p>(123) 456-7890</p>
         </div>
         <div className="info-box">
           <p>
-            <strong>Adres:</strong>
+            <strong>Address:</strong>
           </p>
           <p>Sivas</p>
         </div>
@@ -198,7 +198,7 @@ function Iletisim() {
         </div>
       </InfoContainer>
 
-      {/* İletişim Formu */}
+      {/* Contact form */}
     </Container>
   );
 }

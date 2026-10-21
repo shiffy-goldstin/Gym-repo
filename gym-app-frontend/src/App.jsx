@@ -37,7 +37,7 @@ function App() {
 
 // Bileşenleri doğru şekilde tanımlayalım
 function Kampanya() {
-  return <div>Kampanyalar Sayfası</div>;
+  return <div>Promotions</div>;
 }
 
 export default App;

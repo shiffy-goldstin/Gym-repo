@@ -103,12 +103,12 @@ const Profil = () => {
         // Eğer yanıt 200 ise formu temizle ve başarı mesajını ayarla
         setEmail("");
         setMonth(0);
-        setSuccessMessage("Başarıyla gönderildi!"); // Başarı mesajı
+        setSuccessMessage("Submitted successfully!"); // Success message
       }
       console.log("Response:", response.data);
     } catch (error) {
       console.error("Error:", error);
-      setErrorMessage("Bir hata oluştu!"); // Hata mesajı
+      setErrorMessage("An error occurred."); // Error message
     }
   };
 
@@ -144,12 +144,12 @@ const Profil = () => {
           sixMonths: 0,
           twelveMonths: 0,
         });
-        setSuccessMessage("Başarıyla gönderildi!"); // Başarı mesajı
+        setSuccessMessage("Submitted successfully!"); // Success message
       }
       console.log("Response:", response.data);
     } catch (error) {
       console.error("Error:", error);
-      setErrorMessage("Bir hata oluştu!"); // Hata mesajı
+      setErrorMessage("An error occurred."); // Error message
     }
   };
 
@@ -188,12 +188,12 @@ const Profil = () => {
           waist: 0,
           hip: 0,
         });
-        setSuccessMessage("Başarıyla gönderildi!"); // Başarı mesajı
+        setSuccessMessage("Submitted successfully!"); // Success message
       }
       console.log("Response:", response.data);
     } catch (error) {
       console.error("Error:", error);
-      setErrorMessage("Bir hata oluştu!"); // Hata mesajı
+      setErrorMessage("An error occurred."); // Error message
     }
   };
 
@@ -230,12 +230,12 @@ const Profil = () => {
           email: "",
           endDate: "",
         });
-        setSuccessMessage("Başarıyla gönderildi!"); // Başarı mesajı
+        setSuccessMessage("Submitted successfully!"); // Success message
       }
       console.log("Response:", response.data);
     } catch (error) {
       console.error("Error:", error);
-      setErrorMessage("Bir hata oluştu!"); // Hata mesajı
+      setErrorMessage("An error occurred."); // Error message
     }
   };
 
@@ -341,29 +341,29 @@ const Profil = () => {
         {userRole.map((role) => role.split("_")[1]).join(", ")}
       </h2>
 
-      {/* Admin rolü kontrolü */}
+      {/* Admin role check */}
       {userRole.includes("ROLE_ADMIN") && (
         <>
-          {/* Form Seçenekleri */}
+          {/* Form options */}
           <FormButtonsContainer>
             <FormButton onClick={() => handleFormClick("form1")}>
-              Tarih Güncelle
+              Update Membership Date
             </FormButton>
             <FormButton onClick={() => handleFormClick("form2")}>
-              Fiyatları Güncelle
+              Update Prices
             </FormButton>
             <FormButton onClick={() => handleFormClick("form3")}>
-              Ölçüm Oluştur
+              Add Measurements
             </FormButton>
             <FormButton onClick={() => handleFormClick("form4")}>
-              Kullanıcı Oluştur
+              Create User
             </FormButton>
             <FormButton onClick={() => handleFormClick("form5")}>
-              İçerideki Kullanıcı Sayısı
+              Current Member Count
             </FormButton>
           </FormButtonsContainer>
 
-          {/* Aktif Forma Göre İçeriği Göster */}
+          {/* Show the selected form */}
           {activeForm === "form1" && (
             <Form1>
               <form onSubmit={handleSubmit}>
@@ -379,12 +379,12 @@ const Profil = () => {
                 <br />
                 <br />
                 <label>
-                  <span>Ay: </span>
+                  <span>Months: </span>
                   <select
                     value={month}
                     onChange={(e) => setMonth(parseInt(e.target.value))}
                   >
-                    <option value={0}>Seçiniz</option>
+                    <option value={0}>Select</option>
                     <option value={1}>1</option>
                     <option value={3}>3</option>
                     <option value={6}>6</option>
@@ -393,21 +393,21 @@ const Profil = () => {
                 </label>
                 <br />
                 <br />
-                <button type="submit">Gönder</button>
+                <button type="submit">Submit</button>
               </form>
               {successMessage && (
                 <SuccessMessage>{successMessage}</SuccessMessage>
               )}{" "}
-              {/* Başarı mesajını göster */}
+              {/* Show success message */}
               {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}{" "}
-              {/* Hata mesajını göster */}
+              {/* Show error message */}
             </Form1>
           )}
           {activeForm === "form2" && (
             <Form2>
               <form onSubmit={handleSubmit1}>
                 <label>
-                  1 Aylık:
+                  1 Month:
                   <input
                     type="number"
                     value={formData.oneMonths}
@@ -422,7 +422,7 @@ const Profil = () => {
                 </label>
                 <br />
                 <label>
-                  3 Aylık:
+                  3 Months:
                   <input
                     type="number"
                     value={formData.threeMonths}
@@ -437,7 +437,7 @@ const Profil = () => {
                 </label>
                 <br />
                 <label>
-                  6 Aylık:
+                  6 Months:
                   <input
                     type="number"
                     value={formData.sixMonths}
@@ -452,7 +452,7 @@ const Profil = () => {
                 </label>
                 <br />
                 <label>
-                  12 Aylık:
+                  12 Months:
                   <input
                     type="number"
                     value={formData.twelveMonths}
@@ -466,7 +466,7 @@ const Profil = () => {
                   />
                 </label>
                 <br />
-                <button type="submit">Gönder</button>
+                <button type="submit">Submit</button>
               </form>
               {successMessage && (
                 <SuccessMessage>{successMessage}</SuccessMessage>
@@ -490,7 +490,7 @@ const Profil = () => {
                 </label>
                 <br />
                 <label>
-                  Boy:
+                  Height:
                   <input
                     type="number"
                     value={formData1.height}
@@ -505,7 +505,7 @@ const Profil = () => {
                 </label>
                 <br />
                 <label>
-                  Kilo:
+                  Weight:
                   <input
                     type="number"
                     value={formData1.weight}
@@ -520,7 +520,7 @@ const Profil = () => {
                 </label>
                 <br />
                 <label>
-                  Göğüs:
+                  Chest:
                   <input
                     type="number"
                     value={formData1.chest}
@@ -535,7 +535,7 @@ const Profil = () => {
                 </label>
                 <br />
                 <label>
-                  Bel:
+                  Waist:
                   <input
                     type="number"
                     value={formData1.waist}
@@ -550,7 +550,7 @@ const Profil = () => {
                 </label>
                 <br />
                 <label>
-                  Kalça:
+                  Hips:
                   <input
                     type="number"
                     value={formData1.hip}
@@ -564,7 +564,7 @@ const Profil = () => {
                   />
                 </label>
                 <br />
-                <button type="submit">Gönder</button>
+                <button type="submit">Submit</button>
               </form>
               {successMessage && (
                 <SuccessMessage>{successMessage}</SuccessMessage>
@@ -576,7 +576,7 @@ const Profil = () => {
             <Form4>
               <form onSubmit={handleSubmit3}>
                 <label>
-                  Ad:
+                  First Name:
                   <input
                     type="text"
                     value={formData2.firstName}
@@ -588,7 +588,7 @@ const Profil = () => {
                 </label>
                 <br />
                 <label>
-                  Soyad:
+                  Last Name:
                   <input
                     type="text"
                     value={formData2.lastName}
@@ -612,7 +612,7 @@ const Profil = () => {
                 </label>
                 <br />
                 <label>
-                  Bitiş Tarihi:
+                  End Date:
                   <input
                     type="date"
                     value={formData2.endDate}
@@ -623,7 +623,7 @@ const Profil = () => {
                   />
                 </label>
                 <br />
-                <button type="submit">Gönder</button>
+                <button type="submit">Submit</button>
               </form>
               {successMessage && (
                 <SuccessMessage>{successMessage}</SuccessMessage>
@@ -639,33 +639,33 @@ const Profil = () => {
           )}
         </>
       )}
-      {/* user rolü kontrolü */}
+      {/* User role check */}
       {userRole.includes("ROLE_USER") && (
         <Wrapper1>
-          <b>Kalan Süre: </b>{" "}
+          <b>Time Remaining: </b>{" "}
           {numberFromApi1 !== null ? numberFromApi1 : "Loading..."}
           <hr />
-          <h2>Ölçümler</h2>
+          <h2>Measurements</h2>
           <ScrollableList>
             {measurements.map((measurement, index) => (
               <div key={index}>
                 <p>
-                  <strong>Boy:</strong> {measurement.height} cm
+                  <strong>Height:</strong> {measurement.height} cm
                 </p>
                 <p>
-                  <strong>Kilo:</strong> {measurement.weight} kg
+                  <strong>Weight:</strong> {measurement.weight} kg
                 </p>
                 <p>
-                  <strong>Göğüs:</strong> {measurement.chest} cm
+                  <strong>Chest:</strong> {measurement.chest} cm
                 </p>
                 <p>
-                  <strong>Bel:</strong> {measurement.waist} cm
+                  <strong>Waist:</strong> {measurement.waist} cm
                 </p>
                 <p>
-                  <strong>Kalça:</strong> {measurement.hip} cm
+                  <strong>Hips:</strong> {measurement.hip} cm
                 </p>
                 <p>
-                  <strong>Ölçüm Tarihi:</strong> {measurement.createdDate}
+                  <strong>Measurement Date:</strong> {measurement.createdDate}
                 </p>
                 <hr />
               </div>

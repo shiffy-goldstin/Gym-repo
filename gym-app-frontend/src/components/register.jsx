@@ -19,7 +19,7 @@ const Register = () => {
 
     if (!firstName || lastNameParts.length === 0) {
       setIsError(true);
-      setMessage("נא להזין שם פרטי ושם משפחה.");
+      setMessage("Please enter your first and last name.");
       return;
     }
 
@@ -31,13 +31,13 @@ const Register = () => {
         password,
       });
       setIsError(false);
-      setMessage("ההרשמה הצליחה. מעבירים אותך להתחברות...");
+      setMessage("Registration successful. Redirecting you to log in...");
       navigate("/login");
     } catch (error) {
       setIsError(true);
       setMessage(error.response?.status === 409
-        ? "כבר קיים חשבון עם כתובת האימייל הזו."
-        : error.response?.data?.detail || "לא ניתן להשלים את ההרשמה. בדקי את הפרטים ונסי שוב.");
+        ? "An account with this email address already exists."
+        : "Unable to complete registration. Check your details and try again.");
     }
   };
 
@@ -45,12 +45,12 @@ const Register = () => {
     <RegisterContainer>
       <FormSection>
         <RegisterForm onSubmit={handleRegister}>
-          <FormTitle>Üye Ol</FormTitle>
-          <FormInput type="text" placeholder="Ad Soyad" value={fullName} onChange={(event) => setFullName(event.target.value)} required />
-          <FormInput type="email" placeholder="E-posta Adresi" value={email} onChange={(event) => setEmail(event.target.value)} required />
-          <FormInput type="password" placeholder="Şifre (en az 8 karakter)" value={password} onChange={(event) => setPassword(event.target.value)} minLength={8} required />
+          <FormTitle>Create an Account</FormTitle>
+          <FormInput type="text" placeholder="Full name" value={fullName} onChange={(event) => setFullName(event.target.value)} required />
+          <FormInput type="email" placeholder="Email address" value={email} onChange={(event) => setEmail(event.target.value)} required />
+          <FormInput type="password" placeholder="Password (at least 8 characters)" value={password} onChange={(event) => setPassword(event.target.value)} minLength={8} required />
           {message && <FormMessage $error={isError}>{message}</FormMessage>}
-          <RegisterButton type="submit">Kayıt Ol</RegisterButton>
+          <RegisterButton type="submit">Sign Up</RegisterButton>
         </RegisterForm>
       </FormSection>
       <ImageSection>

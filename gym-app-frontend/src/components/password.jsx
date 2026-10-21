@@ -103,7 +103,7 @@ const PasswordUpdate = () => {
         // Başarı durumunda formu temizle
         setOldPassword("");
         setNewPassword("");
-        setSuccessMessage("Şifre başarıyla güncellendi!");
+        setSuccessMessage("Password updated successfully!");
         setErrorMessage(""); // Hata mesajını temizle
 
         // localStorage'daki bilgileri temizle
@@ -117,7 +117,7 @@ const PasswordUpdate = () => {
       console.log("Response:", response.data);
     } catch (error) {
       console.error("Error:", error);
-      setErrorMessage("Şifre güncellenirken bir hata oluştu.");
+      setErrorMessage("An error occurred while updating your password.");
       setSuccessMessage(""); // Başarı mesajını temizle
     }
   };
@@ -125,10 +125,10 @@ const PasswordUpdate = () => {
   return (
     <Wrapper1>
       <Wrapper>
-        <h2 style={{ color: "#5ddb47" }}>Şifre Güncelle</h2>
+        <h2 style={{ color: "#5ddb47" }}>Change Password</h2>
         <Form onSubmit={handleSubmit}>
           <label style={{ color: "rgb(31, 34, 30)" }}>
-            <b>Eski Şifre: </b>
+            <b>Current Password: </b>
           </label>
           <Input
             type="password"
@@ -138,7 +138,7 @@ const PasswordUpdate = () => {
           />
 
           <label style={{ color: "rgb(31, 34, 30)" }}>
-            <b>Yeni Şifre: </b>
+            <b>New Password: </b>
           </label>
           <Input
             type="password"
@@ -147,7 +147,7 @@ const PasswordUpdate = () => {
             required
           />
 
-          <Button type="submit">Güncelle</Button>
+          <Button type="submit">Update Password</Button>
         </Form>
 
         {/* Başarı ve hata mesajlarını göster */}

@@ -8,17 +8,17 @@ const SporPlanlari = () => {
   const [subscriptionMessage, setSubscriptionMessage] = useState("");
   const [subscriptionError, setSubscriptionError] = useState(false);
   const [plans, setPlans] = useState([
-    { title: "1 AYLIK PLAN", months: 1, price: "Yükleniyor..." },
-    { title: "3 AYLIK PLAN", months: 3, price: "Yükleniyor..." },
-    { title: "6 AYLIK PLAN", months: 6, price: "Yükleniyor..." },
-    { title: "12 AYLIK PLAN", months: 12, price: "Yükleniyor..." }
+    { title: "1-MONTH PLAN", months: 1, price: "Loading..." },
+    { title: "3-MONTH PLAN", months: 3, price: "Loading..." },
+    { title: "6-MONTH PLAN", months: 6, price: "Loading..." },
+    { title: "12-MONTH PLAN", months: 12, price: "Loading..." }
   ]);
 
   const subscribeToPlan = async (months) => {
     const accessToken = localStorage.getItem("accessToken");
     if (!accessToken) {
       setSubscriptionError(true);
-      setSubscriptionMessage("התחברי לחשבון לפני בחירת תוכנית.");
+      setSubscriptionMessage("Log in to your account before choosing a plan.");
       return;
     }
 
@@ -31,12 +31,12 @@ const SporPlanlari = () => {
         { months },
         { headers: { Authorization: `Bearer ${accessToken}` } }
       );
-      setSubscriptionMessage(`המנוי הופעל עד ${response.data.endDate}.`);
+      setSubscriptionMessage(`Your membership is active until ${response.data.endDate}.`);
     } catch (error) {
       setSubscriptionError(true);
       setSubscriptionMessage(error.response?.status === 401 || error.response?.status === 403
-        ? "ההתחברות פגה. התחברי מחדש ונסי שוב."
-        : "לא ניתן להפעיל את התוכנית כרגע. נסי שוב.");
+        ? "Your session has expired. Log in again and try once more."
+        : "Unable to activate this plan right now. Please try again.");
     } finally {
       setSubmittingMonths(null);
     }
@@ -53,10 +53,10 @@ const SporPlanlari = () => {
         
         // Planları güncelleme
         setPlans([
-          { title: "1 AYLIK PLAN", months: 1, price: `${oneMonths} TL / Ay` },
-          { title: "3 AYLIK PLAN", months: 3, price: `${threeMonths} TL / 3 Ay` },
-          { title: "6 AYLIK PLAN", months: 6, price: `${sixMonths} TL / 6 Ay` },
-          { title: "12 AYLIK PLAN", months: 12, price: `${twelveMonths} TL / 12 Ay` }
+          { title: "1-MONTH PLAN", months: 1, price: `${oneMonths} TL / month` },
+          { title: "3-MONTH PLAN", months: 3, price: `${threeMonths} TL / 3 months` },
+          { title: "6-MONTH PLAN", months: 6, price: `${sixMonths} TL / 6 months` },
+          { title: "12-MONTH PLAN", months: 12, price: `${twelveMonths} TL / 12 months` }
         ]);
       } catch (error) {
         console.error("Fiyatları alırken hata oluştu:", error);
@@ -78,7 +78,7 @@ const SporPlanlari = () => {
               onClick={() => subscribeToPlan(plan.months)}
               disabled={submittingMonths !== null}
             >
-              {submittingMonths === plan.months ? "נרשם..." : "בחרי תוכנית"}
+              {submittingMonths === plan.months ? "Processing..." : "Choose Plan"}
             </PriceButton>
           </Plan>
         ))}

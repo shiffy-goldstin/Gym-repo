@@ -21,30 +21,30 @@ const Header = () => {
       </LogoContainer>
       <NavMenu>
         <NavItem to="/" active={location.pathname === "/"}>
-          Anasayfa
+          Home
         </NavItem>
         <NavItem to="/hakkimizda" active={location.pathname === "/hakkimizda"}>
-          Hakkımızda
+          About Us
         </NavItem>
         <NavItem to="/planlar" active={location.pathname === "/planlar"}>
-          Spor Planları
+          Membership Plans
         </NavItem>
         <NavItem to="/iletisim" active={location.pathname === "/iletisim"}>
-          İletişim
+          Contact
         </NavItem>
       </NavMenu>
       <AuthButtons>
         {isLoggedIn && (
           <RestartPasswordButton to="/password">
-            Şifre Değiştir
+            Change Password
           </RestartPasswordButton>
         )}
         {!isLoggedIn && (
-          <AuthButtonLogin to="/login">Giriş Yap</AuthButtonLogin>
+          <AuthButtonLogin to="/login">Log In</AuthButtonLogin>
         )}
         {isLoggedIn && (
           <AuthButton as="button" onClick={handleLogout}>
-            Çıkış
+            Log Out
           </AuthButton>
         )}
       </AuthButtons>

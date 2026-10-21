@@ -10,73 +10,71 @@ const Hakkimizda = () => {
     <AboutContainer>
       <Section>
         <ImageContainer>
-          <Image src={gymImageOne} alt="Biz Kimiz" />
+          <Image src={gymImageOne} alt="Who We Are" />
         </ImageContainer>
         <TextContainer>
-          <h3>Biz Kimiz?</h3>
+          <h3>Who We Are</h3>
           <p>
-            Sağlıklı yaşam ve güçlü bir gelecek için kurulan spor salonumuz, üyelerimizin
-            fitness hedeflerine ulaşmalarını desteklemek amacıyla hizmet vermektedir.
-            Deneyimli eğitmenlerimiz ve kapsamlı spor imkanlarımız ile her seviyedeki
-            sporcuya uygun ortamlar sunuyoruz.
+            Our gym was founded to support healthy living and a stronger future.
+            We help our members reach their fitness goals with experienced trainers
+            and facilities suited to athletes of every level.
           </p>
         </TextContainer>
       </Section>
 
       <Section>
         <TextContainer>
-          <h3>Amacımız</h3>
+          <h3>Our Purpose</h3>
           <p>
-            Amacımız, sağlıklı yaşam alışkanlıklarını desteklemek ve herkesin kendi
-            potansiyeline ulaşmasını sağlamaktır. Bu doğrultuda, kişiye özel antrenman
-            programları ve grup dersleri ile üyelerimize rehberlik ediyoruz.
+            Our goal is to encourage healthy habits and help everyone reach their
+            potential. We guide our members with personalized workout plans and
+            group classes.
           </p>
         </TextContainer>
         <ImageContainer>
-          <Image src={gymImageTwo} alt="Amacımız" />
+          <Image src={gymImageTwo} alt="Our Purpose" />
         </ImageContainer>
       </Section>
 
       <Section>
         <ImageContainer>
-          <Image src={gymImageThree} alt="Sunduğumuz Hizmetler" />
+          <Image src={gymImageThree} alt="Our Services" />
         </ImageContainer>
         <TextContainer>
-          <h3>Planlarımız ve Hizmetlerimiz</h3>
+          <h3>Our Plans and Services</h3>
           <p>
-            Spor salonumuzda çeşitli antrenman planları sunuyoruz: Temel fitness, kas
-            geliştirme, yağ yakımı, esneklik ve mobilite gibi farklı ihtiyaçlara yönelik
-            programlar. Ayrıca grup dersleri, bireysel antrenman seansları ve yüksek
-            yoğunluklu interval antrenman (HIIT) dersleri de mevcut.
+            We offer a range of workout plans for different needs, including
+            foundational fitness, muscle building, fat loss, flexibility, and
+            mobility. Members can also join group classes, personal training
+            sessions, and high-intensity interval training (HIIT).
           </p>
         </TextContainer>
       </Section>
 
       <Section>
         <TextContainer>
-          <h3>Spor Salonumuzun Görünümü</h3>
+          <h3>Our Facility</h3>
           <p>
-            Modern ekipmanlar, geniş spor alanları ve ferah stüdyolarımız ile üyelerimize
-            rahat bir spor deneyimi sunuyoruz. Spor salonumuz, motivasyon dolu atmosferi ve
-            son teknoloji ekipmanları ile her zaman en iyi hizmeti vermeyi amaçlıyor.
+            Our modern equipment, spacious workout areas, and airy studios create
+            a comfortable place to train. With an energizing atmosphere and modern
+            facilities, we are committed to giving our members a great experience.
           </p>
         </TextContainer>
         <ImageContainer>
-          <Image src={gymImageTwo} alt="Spor Salonu" />
+          <Image src={gymImageTwo} alt="Gym Facility" />
         </ImageContainer>
       </Section>
 
       <Section>
         <ImageContainer>
-          <Image src={gymImageOne} alt="İşleyişimiz" />
+          <Image src={gymImageOne} alt="How We Work" />
         </ImageContainer>
         <TextContainer>
-          <h3>İşleyişimiz</h3>
+          <h3>How We Work</h3>
           <p>
-            Spor salonumuz, üyelerin konforu için haftanın 6 günü açıktır. Uzman eğitmenler
-            tarafından verilen dersler, kişisel antrenman seansları ve düzenli olarak
-            güncellenen programlar ile herkesin fitness hedeflerine ulaşması için
-            çalışıyoruz.
+            Our gym is open six days a week for your convenience. Expert-led
+            classes, personal training sessions, and regularly updated programs
+            help every member work toward their fitness goals.
           </p>
         </TextContainer>
       </Section>

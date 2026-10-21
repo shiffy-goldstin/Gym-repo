@@ -55,7 +55,7 @@ const Unauthorized = () => {
     <UnauthorizedContainer>
       <UnauthorizedTitle>403</UnauthorizedTitle>
       <UnauthorizedMessage>
-        Unauthorized Access - You do not have permission to view this page.
+        You do not have permission to view this page.
       </UnauthorizedMessage>
           <BackButton onClick={handleGoBack}>Go Back</BackButton>
           <br />
